@@ -11,7 +11,7 @@ const HomePage: React.FC = () => {
     <div>
       <Head>
         <title>Myco-Net | Decentralized AI Development Community</title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+        
         <script src="https://kit.fontawesome.com/79e3956dbb.js" crossOrigin="anonymous" async></script>
       </Head>
       <body>

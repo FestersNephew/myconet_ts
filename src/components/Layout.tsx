@@ -8,9 +8,9 @@ type LayoutProps = {
 
 const Layout = ({ children }: LayoutProps) => (
   <>
-    <header>
+    <Head>
       {/* Your header content */}
-    </header>
+    </Head>
     <main>{children}</main>
     <footer>
       {/* Your footer content */}

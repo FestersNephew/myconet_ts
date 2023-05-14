@@ -258,3 +258,9 @@
     animation-name: animate__fadeIn;
   }
   
+  .stake-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+  

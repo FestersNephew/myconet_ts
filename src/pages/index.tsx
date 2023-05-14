@@ -2,6 +2,9 @@ import React from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
 import { useEffect } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTwitter, faFacebookF, faInstagram } from '@fortawesome/free-brands-svg-icons';
+import StakeButton from '../components/StakeButton';
 
 const HomePage: React.FC = () => {
   useEffect(() => {
@@ -11,11 +14,9 @@ const HomePage: React.FC = () => {
     <div>
       <Head>
         <title>Myco-Net | Decentralized AI Development Community</title>
-        
-        <script src="https://kit.fontawesome.com/79e3956dbb.js" crossOrigin="anonymous" async></script>
       </Head>
-      <body>
         <header>
+          <StakeButton />
           <h1>Myco-Net</h1>
           <nav>
             <ul>
@@ -37,7 +38,8 @@ const HomePage: React.FC = () => {
 
             <section className="hero">
               <div className="trigger">
-                <Image src="/images/tree.png" alt="Tree" width={1024} height={1024} />
+              <Image src="/images/tree.png" alt="Tree" width={1024} height={1024} priority />
+
               </div>
             </section>
             <section className="features" id="features">
@@ -70,22 +72,18 @@ const HomePage: React.FC = () => {
               <div className="social-media">
                 <h3>Follow us on social media:</h3>
                 <ul>
-                  <li><a href="#"><i className="fa-brands fa-twitter fa-spin"></i></a></li>
-                  <li><a href="#"><i className="fab fa-facebook-f"></i></a></li>
-                  <li><a href="#"><i className="fab fa-instagram"></i></a></li>
+                  <li><a href="#"><FontAwesomeIcon icon={faTwitter} /></a></li>
+                  <li><a href="#"><FontAwesomeIcon icon={faFacebookF} /></a></li>
+                  <li><a href="#"><FontAwesomeIcon icon={faInstagram} /></a></li>
                 </ul>
               </div>
             </div>
             <div className="footer-bottom">
               <p>&copy; 2023 Myco-Net. All rights reserved.</p>
             </div>
-          </footer>
-          
+          </footer>      
         </div>
-
         <script src="interactivity.js" async></script>
-        
-      </body>
     </div>
   
     );

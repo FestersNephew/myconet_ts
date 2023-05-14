@@ -1,14 +1,12 @@
 import { AppProps } from 'next/app';
-import Script from 'next/script';
 import '../styles/styles.css';
+import '@fortawesome/fontawesome-svg-core/styles.css';
+import { config } from '@fortawesome/fontawesome-svg-core';
+
+config.autoAddCss = false;
 
 function MyApp({ Component, pageProps }: AppProps) {
-  return (
-    <>
-      <Script src="https://kit.fontawesome.com/79e3956dbb.js" crossOrigin="anonymous" strategy="beforeInteractive" />
-      <Component {...pageProps} />
-    </>
-  );
+  return <Component {...pageProps} />;
 }
 
 export default MyApp;

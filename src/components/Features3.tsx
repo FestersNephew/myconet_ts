@@ -1,14 +1,9 @@
 import React from 'react';
 import styles from './Features3.module.css'; // Example CSS module for styling
-import StakeButton from '../components/StakeButton';
-
 
 const Features3: React.FC = () => {
     return (
       <section className={styles.features3}>
-       <div className={styles.stakeButtonWrapper}>
-          <StakeButton />
-        </div>
         <div className={styles.featureContent}>
           <h2>We believe that owning TAO goes much deeper...</h2>
           <p>

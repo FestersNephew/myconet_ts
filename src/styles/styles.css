@@ -128,10 +128,24 @@
     margin-bottom: -15rem;
   }
   
-  .feature1, .feature2 {
-    text-align: justify;
-    position: relative;
-    z-index: 1;
+  .feature1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  // features2.module.css
+  .feature2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  // features3.module.css
+  .feature3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   
   .feature1 h2 {

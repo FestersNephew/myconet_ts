@@ -71,7 +71,7 @@
     animation: fadeout 5s linear reverse;
     max-height: calc(100% - 150px);
     top: 0;
-    position: absolute;
+    position: relative;
   
   }
   
@@ -88,7 +88,7 @@
     line-height: 1.5rem;
     margin-bottom: 1rem;
   }
-  
+
   @keyframes fadeout {
     0% {
       opacity: 1;
@@ -103,7 +103,8 @@
       transform: translate(-50%, -150%);
     }
   }
-  
+
+  /* hero */
   .hero {
     position: relative;
   }
@@ -129,37 +130,15 @@
   }
   
   .feature1 {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  // features2.module.css
-  .feature2 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  // features3.module.css
-  .feature3 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: column; /* Stack the items in the feature1 section */
+    align-items: center; /* Center align the items horizontally */
+    text-align: center; /* Center align the text */
   }
   
   .feature1 h2 {
     font-size: 1.8rem;
     margin-bottom: 1rem;
     color: #365e1a;
-    text-align: center;
-  }
-  
-  .feature2 h2 {
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
-    color: #bfa97a;
-    text-align: center;
   }
   
   .feature1 p {
@@ -167,6 +146,20 @@
     line-height: 1.5rem;
     margin-bottom: 1rem;
     color: #bfa97a;
+    text-align: center; /* Center align the text */
+  }
+  
+  
+  .feature2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .feature2 h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #bfa97a;
+    text-align: center;
   }
   
   .feature2 p {
@@ -176,6 +169,15 @@
     color: #365e1a;
   }
   
+  .feature3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+
+  }
+
+
   /* Footer */
   footer {
     background-color: #3c2318;
@@ -270,5 +272,63 @@
   .animate__fadeIn {
     opacity: 0;
     animation-name: animate__fadeIn;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .textbox {
+      font-size: 0.8rem;
+      max-width: 80%;
+      top: unset;
+      left: 0;
+      right: 0;
+      transform: none;
+      margin: 1rem auto;
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+    }
+  
+    .textbox h2 {
+      /* Add any additional styles if needed */
+    }
+  
+    .textbox p {
+      /* Add any additional styles if needed */
+    }
+  
+    .features {
+      top: unset;
+      margin-top: 0.5rem;
+      margin-bottom: 0;
+    }
+  
+    .feature1 {
+      flex-direction: column;
+    }
+  
+    .feature3 {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 0 1rem;
+    }
+  
+    .feature3 p {
+      word-break: break-word;
+      max-width: 100%;
+    }
+  
+    .feature3 ul {
+      white-space: normal;
+      overflow-x: unset;
+      padding: 0;
+    }
+  
+    .feature3 li {
+      display: block;
+      vertical-align: top;
+      margin-right: 0;
+      margin-bottom: 1rem;
+    }
   }
   

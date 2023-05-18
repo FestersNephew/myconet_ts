@@ -1,10 +1,10 @@
 import React from 'react';
-import styles from './Features3.module.css'; // Example CSS module for styling
-import StakeButton from '../components/StakeButton';
+import styles from './Feature3.module.css'; // Example CSS module for styling
+import StakeButton from '../StakeButton/StakeButton';
 
-const Features3: React.FC = () => {
+const Feature3: React.FC = () => {
     return (
-      <section className={styles.features3}>
+      <section className={styles.feature3}>
         <div className={styles.featureContent}>
           <h2>We believe that owning TAO goes much deeper...</h2>
           <p>
@@ -39,5 +39,5 @@ const Features3: React.FC = () => {
     );
   };
   
-  export default Features3;
+  export default Feature3;
   

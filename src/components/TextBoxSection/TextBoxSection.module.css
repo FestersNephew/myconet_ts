@@ -1,0 +1,61 @@
+/* TextBoxSection.module.css */
+
+.textbox {
+  font-family: 'Bungee Inline', cursive;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 10px;
+  background: #bba97a;
+  box-shadow: -10px -10px 10px rgba(245, 245, 245, 0.1), 10px 10px 10px rgba(0, 0, 0, 0.2);
+  max-height: calc(100% - 150px);
+  position: relative;
+  opacity: 0; /* Initially hide the textbox */
+  transform: translateX(100%); /* Initially position the textbox outside the screen */
+  animation-duration: 1s; /* Adjust the animation duration as needed */
+  animation-name: fadein; /* Specify the animation name */
+  animation-fill-mode: forwards; /* Keep the final state of the animation after it finishes */
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(-50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
+/* Additional styles for h2 and p elements if needed */
+.textbox h2 {
+  font-size: 2rem;
+  color: #2b3a27;
+  margin-bottom: 1rem;
+}
+
+.textbox p {
+  font-family: 'Bungee Inline', cursive;
+  color: #2b3a27;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  .textbox {
+    font-size: 0.8rem;
+    max-width: 80%;
+    top: unset;
+    left: 0;
+    right: 0;
+    transform: none;
+    margin: 1rem auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+}

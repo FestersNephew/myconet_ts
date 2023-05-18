@@ -1,4 +1,4 @@
-.features3 {
+.feature3 {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -10,20 +10,20 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
   
-  .features3 h2 {
+  .feature3 h2 {
     font: ariel;
     font-size: 1.5rem;
     margin-bottom: 1rem;
   }
   
-  .features3 p {
+  .feature3 p {
     font: ariel;
     font-size: 1rem;
     line-height: 1.5;
     color: #555555;
   }
   
-  .features3-box {
+  .feature3-box {
     background-color: #f8f8f8;
     padding: 20px;
     border-radius: 8px;

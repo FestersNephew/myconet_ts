@@ -121,7 +121,7 @@
     padding: 1rem;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-gap: 5rem; /* Added grid-gap property */
+    grid-gap: 5rem;
     justify-items: center;
     align-items: flex-start;
     position: relative;
@@ -130,9 +130,9 @@
   }
   
   .feature1 {
-    flex-direction: column; /* Stack the items in the feature1 section */
-    align-items: center; /* Center align the items horizontally */
-    text-align: center; /* Center align the text */
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
   
   .feature1 h2 {
@@ -149,7 +149,6 @@
     text-align: center; /* Center align the text */
   }
   
-  
   .feature2 {
     display: flex;
     flex-direction: column;
@@ -163,9 +162,9 @@
   }
   
   .feature2 p {
-    font-size: 1.1rem;
-    line-height: 1.5rem;
-    margin-bottom: 1rem;
+    font-size: 1rem;
+    line-height: 1.2rem;
+    margin-bottom: 0.5rem;
     color: #365e1a;
   }
   
@@ -173,10 +172,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-   
-
   }
-
 
   /* Footer */
   footer {
@@ -255,7 +251,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 1; /* make sure the animation is above the image */
+    z-index: 1;
   }
   
   .root-frame {
@@ -285,14 +281,6 @@
       margin: 1rem auto;
       margin-top: 2rem;
       margin-bottom: 2rem;
-    }
-  
-    .textbox h2 {
-      /* Add any additional styles if needed */
-    }
-  
-    .textbox p {
-      /* Add any additional styles if needed */
     }
   
     .features {

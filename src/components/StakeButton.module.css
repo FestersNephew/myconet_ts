@@ -1,0 +1,25 @@
+.stakeButton {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding: 0;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .star {
+    transition: fill 0.3s ease;
+    width: 160px;
+    height: 160px;
+  }
+  
+  .buttonText {
+    font-size: 14px;
+    fill: #bba97a;
+    transition: fill 0.3s ease;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  

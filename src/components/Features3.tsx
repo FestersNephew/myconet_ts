@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './Features3.module.css'; // Example CSS module for styling
+import StakeButton from '../components/StakeButton';
 
 const Features3: React.FC = () => {
     return (
@@ -31,6 +32,7 @@ const Features3: React.FC = () => {
               <h4>Delegator Hot Key Address</h4>
               <p>5Dkv87qjGGF42SNhDAep6WZp65E29c2vUPUfDBGDNevENCMs</p>
             </div>
+            <StakeButton />
           </div>
         </div>
       </section>

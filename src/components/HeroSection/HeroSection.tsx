@@ -3,9 +3,9 @@ import styles from './HeroSection.module.css';
 
 const HeroSection: React.FC = () => {
   return (
-    <section className={styles.hero}>
-      <div className={styles['parallax-image']} />
-    </section>
+    <div className={styles.heroSection}>
+      {/* Content to be overlaid on top of the background image */}
+    </div>
   );
 };
 

@@ -20,7 +20,14 @@ const Footer: React.FC = () => {
   };
 
   return (
-    <footer id="footer" className={styles.footer} onMouseOver={handleFooterMouseOver} onMouseOut={handleFooterMouseOut} style={{ backgroundColor: footerBackground }}>
+    <footer
+  id="footer"
+  className={styles.footer}
+  onMouseOver={handleFooterMouseOver}
+  onMouseOut={handleFooterMouseOut}
+  style={footerBackground ? { backgroundColor: footerBackground } : undefined as React.CSSProperties | undefined}
+>
+
       <div className={styles.footerContent}>
         <div className={styles.contactInfo}>
           <h3>Contact Us</h3>

@@ -3,31 +3,33 @@
     background-color: #3c2318;
     color: #bba97a;
     padding: 40px 20px;
+    position: relative;
+    z-index: 1;
   }
   
-  .footer-content {
+  .footerContent {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
   
-  .contact-info h3,
-  .social-media h3 {
+  .contactInfo h3,
+  .socialMedia h3 {
     font-size: 1.5em;
     margin-bottom: 10px;
   }
   
-  .contact-info p {
+  .contactInfo p {
     margin: 0;
     font-size: 1.1em;
   }
   
-  .social-media-icons {
+  .socialMediaIcons {
     display: flex;
     justify-content: center;
   }
   
-  .social-media-icons a {
+  .socialMediaIcons a {
     display: inline-block;
     margin: 0 10px;
     font-size: 1.5rem;
@@ -35,31 +37,31 @@
     text-decoration: none;
   }
   
-  .social-media-icons a:hover {
+  .socialMediaIcons a:hover {
     color: #ddd;
   }
   
-  .social-media-icons i {
+  .socialMediaIcons i {
     transition: color 0.3s ease-in-out;
   }
   
-  .fa-facebook {
+  .faFacebook {
     color: #3b5998;
   }
   
-  .fa-twitter {
+  .faTwitter {
     color: #1da1f2;
   }
   
-  .fa-instagram {
+  .faInstagram {
     color: #e4405f;
   }
   
-  .fa-linkedin {
+  .faLinkedin {
     color: #0077b5;
   }
   
-  .footer-bottom {
+  .footerBottom {
     text-align: center;
     margin-top: 20px;
     padding-top: 20px;

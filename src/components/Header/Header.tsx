@@ -1,11 +1,10 @@
 import React from 'react';
-import StakeButton from '../StakeButton/StakeButton';
 import styles from './Header.module.css';
 
 const Header: React.FC = () => {
   return (
     <header className={styles.header}>
-      <StakeButton />
+
       <h1>Myco-Net</h1>
       <nav>
         <ul>

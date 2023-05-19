@@ -2,6 +2,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
+    z-index: 0;
+    background-color: transparent;
   }
   
   .feature2 h2 {

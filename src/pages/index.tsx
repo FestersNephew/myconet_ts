@@ -17,11 +17,13 @@ const HomePage: React.FC = () => {
         <title>Myco-Net | Decentralized AI Development Community</title>
       </Head>
       <Header />
+      <div>
+      <TextBoxSection />
+      </div>
       <HeroSection />
       
       <div className="container">
         <main>
-          <TextBoxSection />
           <div className="feature3-container">
             <Feature3 />
           </div>

@@ -7,14 +7,14 @@
   
 body {
     font-family: Arial, sans-serif;
-    background-color: #F2F2F2;
+    background-color: #111113;
     color: #333333;
   }
   
   
 /* Main Content */
 main {
-    background-color: #181212;
+    background-color: #111111;
     position: relative;
     overflow: hidden;
   }

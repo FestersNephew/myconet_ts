@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './Feature3.module.css'; // Example CSS module for styling
+import styles from './Feature3.module.css'; 
 
 
 const Feature3: React.FC = () => {

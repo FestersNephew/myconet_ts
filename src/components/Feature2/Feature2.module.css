@@ -1,23 +1,25 @@
+.container {
+  width: 100%;
+  padding: 2rem;
+  background-color: transparent;
+  margin-top: 50px;
+}
+
 .feature2 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    z-index: 0;
-    background-color: transparent;
-  }
-  
-  .feature2 h2 {
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
-    color: #bfa97a;
-    text-align: center;
-  }
-  
-  .feature2 p {
-    font-size: 1rem;
-    line-height: 1.2rem;
-    margin-bottom: 0.5rem;
-    color: #365e1a;
-  }
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #ffffff;
+  padding: 2rem;
+  margin-bottom: 50px; /* Adjust the margin as needed */
+  margin-top: 100px;
+  color: #bba97a /* Add a top margin to prevent overlap */
+}
+
+.feature2Title {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #bfa97a;
+}

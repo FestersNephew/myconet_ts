@@ -20,10 +20,12 @@
     "next": "^13.4.2",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-scroll-parallax": "^3.4.2"
+    "simplebar": "^6.2.5",
+    "simplebar-react": "^3.2.4"
   },
   "devDependencies": {
     "@types/react": "18.2.6",
+    "@types/react-dom": "^18.2.4",
     "@types/webpack": "^4.41.30",
     "css-loader": "^6.4.0",
     "postcss-loader": "^6.2.0",

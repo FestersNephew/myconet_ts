@@ -1,19 +1,24 @@
-/* TextBoxSection.module.css */
-
 .textbox {
   font-family: 'Bungee Inline', cursive;
   padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-align: center;
   border-radius: 10px;
   background: #bba97a;
   box-shadow: -10px -10px 10px rgba(245, 245, 245, 0.1), 10px 10px 10px rgba(0, 0, 0, 0.2);
-  max-height: calc(100% - 150px);
+  max-height: 50px;
+  &.expanded {
+    max-height: 100%;
+  }
   position: relative;
-  opacity: 0; /* Initially hide the textbox */
-  transform: translateX(100%); /* Initially position the textbox outside the screen */
-  animation-duration: 1s; /* Adjust the animation duration as needed */
-  animation-name: fadein; /* Specify the animation name */
-  animation-fill-mode: forwards; /* Keep the final state of the animation after it finishes */
+  opacity: 0;
+  transform: translateX(100%);
+  animation-duration: 1s;
+  animation-name: fadein;
+  animation-fill-mode: forwards;
 }
 
 @keyframes fadein {
@@ -31,7 +36,6 @@
   }
 }
 
-/* Additional styles for h2 and p elements if needed */
 .textbox h2 {
   font-size: 2rem;
   color: #2b3a27;
@@ -46,16 +50,36 @@
   margin-bottom: 1rem;
 }
 
+.textbox .toggleButton {
+  background-color: #365e1a;
+  color: #bba97a;
+  padding: 0.3rem 0.8rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  font-family: 'Bungee Inline', cursive;
+  margin-top: 1rem;
+  align-self: center;
+}
+
+.textContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 @media screen and (max-width: 768px) {
   .textbox {
-    font-size: 0.8rem;
+    font-size: 0.1rem;
     max-width: 80%;
+    max-height: calc(100% - 250px);
     top: unset;
     left: 0;
     right: 0;
     transform: none;
     margin: 1rem auto;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
   }
 }

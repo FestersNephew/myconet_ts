@@ -1,74 +1,40 @@
 .feature3 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 1rem;
-    background-color: #bba97a;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-top: 50px;
-  }
-  
-  .feature3 h2 {
-    font: ariel;
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-  }
-  
-  .feature3 p {
-    font: ariel;
-    font-size: 1rem;
-    line-height: 1.5;
-    color: #555555;
-  }
-  
-  .feature3-box {
-    background-color: #f8f8f8;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    text-align: center;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1rem;
+  background-color: #bba97a;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 50px;
+  max-width: 50%; /* Set the maximum width to 50% */
+  margin: 0 auto; /* Center the container horizontally */
+  word-break: break-word; /* Add this line to allow word wrapping */
+}
 
-  .stakeButtonWrapper {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px; /* Adjust the margin as needed */
-  }
+.feature3 h2 {
+  font-family: Arial;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
 
-  .feature3-container {
-    position: relative;
-    z-index: 1;
-    background-color: transparent;
-  }
-  
-  /* Media Query */
+.feature3 p {
+  font-family: Arial;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.feature3-container {
+  position: relative;
+  z-index: 1;
+  background-color: transparent;
+}
+
+/* Media Query */
 @media screen and (max-width: 768px) {
   .feature3 {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 0 1rem;
-  }
-
-  .feature3 p {
-    word-break: break-word;
-    max-width: 100%;
-  }
-
-  .feature3 ul {
-    white-space: normal;
-    overflow-x: unset;
-    padding: 0;
-  }
-
-  .feature3 li {
-    display: block;
-    vertical-align: top;
-    margin-right: 0;
-    margin-bottom: 1rem;
+    max-width: 80%; /* Adjust the maximum width for smaller screens */
   }
 }

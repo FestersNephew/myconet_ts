@@ -10,7 +10,7 @@ const Footer: React.FC = () => {
   return (
     <footer className={styles.footer}>
       <div className={styles.footerContent}>
-        <div className={styles.contactInfo}>
+        <div className={styles.contactInfo} id="contact">
           <h3>Contact Us</h3>
           <p className={styles.email}>
             <a href={`mailto:${email}`}>{email}</a>
@@ -21,14 +21,14 @@ const Footer: React.FC = () => {
           <ul>
             <li>
               <a href={twitterUrl}>
-                <FontAwesomeIcon icon={faTwitter} />
+                <FontAwesomeIcon icon={faTwitter} style={{ color: '#1da1f2'}} />
               </a>
             </li>
           </ul>
         </div>
       </div>
       <div className={styles.footerBottom}>
-        <p>&copy; 2023 Myco-Net-AI. All rights reserved. Page built by UncleFestersNephew</p>
+        <p>&copy; 2023 Myco-Net-AI. All rights reserved. Built by UncleFestersNephew</p>
       </div>
     </footer>
   );

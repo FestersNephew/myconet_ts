@@ -24,7 +24,7 @@ const TextBoxSection: React.FC = () => {
         </div>
       )}
       <button className={styles.toggleButton} onClick={handleToggle}>
-        {expanded ? 'Collapse' : 'Our Vision'}
+        {expanded ? 'Collapse' : 'Click For Our Vision'}
       </button>
     </section>
   );

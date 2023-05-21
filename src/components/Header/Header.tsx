@@ -2,6 +2,9 @@ import React from 'react';
 import styles from './Header.module.css';
 
 const Header: React.FC = () => {
+  const handleHomeClick = () => {
+    window.location.reload(); // Reload the page
+  };
   return (
     <header className={styles.header}>
 
@@ -9,13 +12,13 @@ const Header: React.FC = () => {
       <nav>
         <ul>
           <li>
-            <a href="#">Home</a>
+          <a href="#" onClick={handleHomeClick}>Home</a> {/* Add onClick event and handleHomeClick function */}
           </li>
           <li>
-            <a href="#features">About</a>
+            <a href="#feature1">About</a>
           </li>
           <li>
-            <a href="#footer">Contact</a>
+            <a href="#contact">Contact</a>
           </li>
         </ul>
       </nav>

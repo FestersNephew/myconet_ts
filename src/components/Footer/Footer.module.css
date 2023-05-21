@@ -1,70 +1,91 @@
-  /* Footer */
-  .footer {
-    background-color: #3c2318;
-    color: #bba97a;
-    padding: 40px 20px;
-    position: relative;
-    z-index: 1;
-  }
-  
-  .footerContent {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .contactInfo h3,
-  .socialMedia h3 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
-  }
-  
-  .contactInfo p {
-    margin: 0;
-    font-size: 1.1em;
-  }
-  
-  .socialMediaIcons {
-    display: flex;
-    justify-content: center;
-  }
-  
-  .socialMediaIcons a {
-    display: inline-block;
-    margin: 0 10px;
-    font-size: 1.5rem;
-    color: #fff;
-    text-decoration: none;
-  }
-  
-  .socialMediaIcons a:hover {
-    color: #ddd;
-  }
-  
-  .socialMediaIcons i {
-    transition: color 0.3s ease-in-out;
-  }
-  
-  .faFacebook {
-    color: #3b5998;
-  }
-  
-  .faTwitter {
-    color: #1da1f2;
-  }
-  
-  .faInstagram {
-    color: #e4405f;
-  }
-  
-  .faLinkedin {
-    color: #0077b5;
-  }
-  
-  .footerBottom {
-    text-align: center;
-    margin-top: 20px;
-    padding-top: 20px;
-    border-top: 1px solid #fff;
-    font-size: 0.8em;
-  }
+/* Footer */
+.footer {
+  background-color: #3c2318;
+  color: #bba97a;
+  padding: 40px 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.footerContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contactInfo h3,
+.socialMedia h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+
+.contactInfo {
+  margin-right: 20px; /* Adjust the margin size as desired */
+}
+
+.contactInfo a {
+  font-size: 0.8em;
+  color: #bba97a; /* Adjust the color to your preference */
+}
+
+.contactInfo p {
+  margin: 0;
+  font-size: 1.1em;
+}
+
+.socialMedia {
+  display: flex;
+  align-items: center;
+}
+
+.socialMedia ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.socialMedia li {
+  margin-left: 10px; /* Adjust the spacing between icons */
+}
+
+.socialMedia a {
+  display: inline-block;
+  font-size: 1.5rem;
+  color: #fff;
+  text-decoration: none;
+}
+
+.socialMedia a:hover {
+  color: #ddd;
+}
+
+.socialMedia a .svg-inline--fa {
+  transition: color 0.3s ease-in-out;
+  width: 1em; /* Add this line to ensure correct sizing of the icons */
+}
+
+.faFacebook {
+  color: #3b5998;
+}
+
+.faTwitter {
+  color: #1da1f2 !important; /* Add !important to override other CSS rules */
+}
+
+.faInstagram {
+  color: #e4405f;
+}
+
+.faLinkedin {
+  color: #0077b5;
+}
+
+.footerBottom {
+  text-align: center;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #fff;
+  font-size: 0.8em;
+}

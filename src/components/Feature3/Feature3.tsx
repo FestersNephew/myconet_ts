@@ -7,9 +7,9 @@ const Feature3: React.FC = () => {
       <section className={styles.feature3}>
         <div className={styles.featureContent}>
           <h2>We believe that owning TAO goes much deeper...</h2>
-          <p>
+          <li>
             By delegating your TAO to MycoNet, it is an easy way to join and contribute to a community that understands this very important responsibility we humans have, moving into the future with developing a decentralized AI for Humanity. We seek to attract delegators and developers who share our passion and vision and who are committed to advancing AI for the benefit of all.
-          </p>
+          </li>
   
           <h3>How will delegators benefit from delegating to MycoNet?</h3>
           <ul>

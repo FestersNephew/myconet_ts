@@ -9,9 +9,9 @@
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   margin-top: 50px;
-  max-width: 50%; /* Set the maximum width to 50% */
-  margin: 0 auto; /* Center the container horizontally */
-  word-break: break-word; /* Add this line to allow word wrapping */
+  max-width: 50%;
+  margin: 0 auto;
+  word-break: break-word;
 }
 
 .feature3 h2 {
@@ -24,6 +24,13 @@
   font-family: Arial;
   font-size: 1rem;
   line-height: 1.5;
+  text-align: center;
+}
+
+.feature3 ul {
+  list-style-type: disc; /* Set the bullet points */
+  padding-left: 2em; /* Adjust the indentation as needed */
+  text-align: left;
 }
 
 .feature3-container {
@@ -35,6 +42,6 @@
 /* Media Query */
 @media screen and (max-width: 768px) {
   .feature3 {
-    max-width: 80%; /* Adjust the maximum width for smaller screens */
+    max-width: 80%;
   }
 }

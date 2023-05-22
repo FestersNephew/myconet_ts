@@ -16,11 +16,11 @@ const Feature2: React.FC = () => {
       <section className={styles.feature2}>
         <h2 className={styles.feature2Title}>MycoNets approach to adhere to this vision includes:</h2>
         {points.map((point, index) => (
-          <p key={index}>{point}</p>
+          <p key={index} className={styles.feature2Point}>{point}</p> /* Add the class feature2Point to each point */
         ))}
       </section>
     </div>
-  );
+  );  
 };
 
 export default Feature2;

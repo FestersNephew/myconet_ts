@@ -1,15 +1,8 @@
-.container {
-  width: 100%;
-  padding: 2rem;
-  background-color: transparent;
-  margin-top: 25px;
-}
-
 .feature2 {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
+  align-items: flex-start; /* Align points to the left */
+  text-align: left;
   background-color: rgba(0, 0, 0, 0.3);
   color: #ffffff;
   padding: 2rem;
@@ -17,8 +10,12 @@
   margin-top: 100px;
 }
 
+.feature2 p {
+  margin-bottom: 1.5rem; /* Increase space between points */
+}
+
 .feature2Title {
   font-size: 1.8rem;
   margin-bottom: 1rem;
-  color: #FAFAFA;
+  color: #fafafa;
 }

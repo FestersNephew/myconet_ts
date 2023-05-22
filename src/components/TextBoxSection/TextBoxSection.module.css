@@ -56,10 +56,12 @@
   padding: 0.3rem 0.8rem;
   border: none;
   border-radius: 5px;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
+  line-height: 1.2;
   cursor: pointer;
   font-family: 'Bungee Inline', cursive;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
   align-self: center;
 }
 

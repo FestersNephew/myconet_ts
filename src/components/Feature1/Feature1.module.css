@@ -6,7 +6,8 @@
   padding: 2rem;
   background-color: rgba(0, 0, 0, 0.3);
   color: #ffffff;
-  margin-top: 50px; /* Adjust the margin as needed */
+  margin-top: 50px; 
+  margin-bottom: 50px;
   z-index: 1;
 }
 
@@ -26,6 +27,6 @@
 
 @media screen and (max-width: 768px) {
   .feature1 {
-    margin-top: 0;
+    margin-bottom: 0;
   }
 }

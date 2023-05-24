@@ -1,21 +1,114 @@
 .feature2 {
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* Align points to the left */
+  align-items: flex-start;
   text-align: left;
   background-color: rgba(0, 0, 0, 0.3);
   color: #ffffff;
   padding: 2rem;
-  margin-bottom: 50px; /* Adjust the margin as needed */
+  margin-bottom: 50px;
   margin-top: 100px;
+  position: relative;
+  overflow: hidden;
+  height: 550px;
+  margin-left: auto; /* Align to the right */
+  width: 50%; /* Set the initial width to full width */
 }
 
-.feature2 p {
-  margin-bottom: 1.5rem; /* Increase space between points */
-}
 
 .feature2Title {
   font-size: 1.8rem;
   margin-bottom: 1rem;
   color: #fafafa;
+}
+
+.pointText {
+  flex: 1; /* Take remaining vertical space */
+  margin-bottom: 1rem;
+  overflow-y: auto; /* Enable scrolling when text exceeds the container height */
+  max-width: calc(100% - 80px); /* Adjust the value (80px) as needed */
+  margin-left: 15%; /* Push the left alignment to the right */
+}
+
+
+
+.dotContainer {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-bottom: 1rem;
+  position: absolute;
+  bottom: 0; /* Position the dots at the bottom */
+  left: 50%; /* Center the dots horizontally */
+  transform: translateX(-50%); /* Adjust horizontal centering */
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.arrowContainer {
+  position: absolute;
+  top: 50%;
+  display: flex;
+  justify-content: space-between; /* Separate arrows to sides */
+  align-items: center;
+  width: calc(100% - 25px); /* Subtract 20px to account for arrow width and margin */
+  transform: translateY(-50%); /* Adjust vertical positioning */
+  left: 5; /* Set left position to 0% */
+}
+
+
+
+
+.arrow {
+  width: 24px;
+  height: 24px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  cursor: pointer;
+  margin: 0 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.arrowText {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, 5px);
+  white-space: nowrap;
+  color: #ffffff;
+  font-size: 12px;
+}
+
+
+
+.activeDot {
+  background-color: #ff0000;
+}
+
+
+@media screen and (max-width: 768px) {
+  .feature2 {
+    width: 100%; /* Adjust the width as needed (e.g., 50% for occupying the right half) */
+  }
+
+  .points {
+    position: relative;
+    scroll-snap-type: none;
+    overflow: visible;
+  }
+
+  .dotContainer,
+  .arrowContainer {
+    display: flex;
+  }
 }

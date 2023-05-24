@@ -7,10 +7,13 @@ const HeroSection: React.FC = () => {
   return (
     <section className={styles.heroSection}>
       <div className={styles.featureContainer}>
-        <Feature1 />
-        <Feature2 />
+        <div className={styles.feature1Container}>
+          <Feature1 />
+        </div>
+        <div className={styles.feature2Container}>
+          <Feature2 />
+        </div>
       </div>
-      
     </section>
   );
 };

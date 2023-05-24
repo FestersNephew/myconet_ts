@@ -6,6 +6,7 @@ import Header from '../components/Header/Header';
 import TextBoxSection from '../components/TextBoxSection/TextBoxSection';
 import Footer from '../components/Footer/Footer';
 import HeroSection from '@/components/HeroSection/HeroSection';
+import Background from '@/components/Background/Background';
 
 
 const HomePage: React.FC = () => {
@@ -17,6 +18,7 @@ const HomePage: React.FC = () => {
         <title>Myco-Net | Decentralized AI Development Community</title>
       </Head>
       <Header />
+      <Background />
       <div>
       <TextBoxSection />
       </div>

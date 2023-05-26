@@ -1,41 +1,19 @@
 import React from 'react';
-import Head from 'next/head';
-import { useEffect } from 'react';
-import Feature3 from '../components/Feature3/Feature3';
-import Header from '../components/Header/Header';
-import TextBoxSection from '../components/TextBoxSection/TextBoxSection';
-import Footer from '../components/Footer/Footer';
-import HeroSection from '@/components/HeroSection/HeroSection';
+import { Link } from 'react-router-dom';
 import Background from '@/components/Background/Background';
-import 'intersection-observer';
 
-
-
-const HomePage: React.FC = () => {
-  useEffect(() => {}, []);
-
+const IndexPage: React.FC = () => {
   return (
-    <div>
-      <Head>
-        <title>Myco-Net | Decentralized AI Development Community</title>
-      </Head>
-      <Header />
+    <div className="container">
       <Background />
-      <div>
-      <TextBoxSection />
-      </div>
-      <HeroSection />
-      
-      <div className="container">
-        <main>
-          <div className="feature3-container">
-            <Feature3 />
-          </div>
-        </main>
-        <Footer />
+      <div className="content">
+        <Link to="/about" className="link">
+          <h1>Take responsibility. Shape ethical AI. Create a better future.</h1>
+        </Link>
+        <p>Our decentralized AI network aims to harness the power of artificial intelligence for the greater good. With a diverse team dedicated to responsible and ethical AI development, we strive to create a future where AI benefits humanity as a whole and serves as a counterbalance to centralized efforts by major tech companies. Join us in shaping an AI-driven world that prioritizes humanitys well-being.</p>
       </div>
     </div>
   );
 };
 
-export default HomePage;
+export default IndexPage;

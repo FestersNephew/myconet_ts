@@ -1,0 +1,69 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    
+
+  }
+  
+  .content {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    max-width: 60%;
+  }
+  
+  .content p {
+    color: white; 
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .link {
+    color: #fff;
+    text-decoration: none !important;
+  }
+  
+
+  .fade-in {
+    opacity: 0;
+    animation: fade-in 1s ease-in-out forwards;
+  }
+  
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .typing {
+    overflow: hidden;
+    border-right: 0.15em solid #000; /* Adjust the border color and width */
+    white-space: normal; /* Change from 'nowrap' to 'normal' */
+    letter-spacing: 0.15em; /* Adjust the letter spacing */
+    animation: typing 3s steps(40, end), blink-caret 0.75s step-end infinite;
+  }
+  
+  
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  
+  @keyframes blink-caret {
+    from, to {
+      border-color: transparent;
+    }
+    50% {
+      border-color: #000; /* Adjust the caret color */
+    }
+  }
+  

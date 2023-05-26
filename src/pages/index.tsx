@@ -7,6 +7,8 @@ import TextBoxSection from '../components/TextBoxSection/TextBoxSection';
 import Footer from '../components/Footer/Footer';
 import HeroSection from '@/components/HeroSection/HeroSection';
 import Background from '@/components/Background/Background';
+import 'intersection-observer';
+
 
 
 const HomePage: React.FC = () => {

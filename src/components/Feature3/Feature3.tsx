@@ -1,14 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import styles from './Feature3.module.css';
+import IntersectionObserverWrapper from '../IntersectionObserverWrapper';
 
 const slides = [
   {
-    header: 'Interested in Delegating and becoming a part of the MycoNet community?',
+    header: 'Delegate with us!',
     text: [
       'Here is how:',
-      'Subnetwork 3: Finney Validator UID 423',
-      'Subnetwork 1: Prompt Network. Validator UID 146',
-      'Delegator Hot Key Address: 5Dkv87qjGGF42SNhDAep6WZp65E29c2vUPUfDBGDNevENCMs',
+      'Subnetwork 3: Finney Validator: UID 423',
+      'Subnetwork 1: Prompt Network: UID 146',
+      'Delegator Hot Key Address: 5Dkv8-7qjGG-F42SN-hDAep-6WZp6-5E29c-2vUPU-fDBGD-NevEN-CMs',
     ],
   },
   {
@@ -23,70 +24,66 @@ const slides = [
   },
 ];
 
-const Component: React.FC = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
+const Feature3: React.FC = () => {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    // Update the active slide when `currentSlide` changes
-    const slideElements = document.getElementsByClassName(styles.slide);
-    for (let i = 0; i < slideElements.length; i++) {
-      slideElements[i].classList.remove(styles.active);
+    if (isVisible) {
+      const interval = setInterval(() => {
+        setActiveIndex((prevIndex) => (prevIndex === slides.length - 1 ? 0 : prevIndex + 1));
+      }, 5000);
+
+      return () => {
+        clearInterval(interval);
+      };
     }
-    slideElements[currentSlide].classList.add(styles.active);
-  }, [currentSlide]);
+  }, [isVisible]);
 
-  const handleScrollRight = () => {
-    setCurrentSlide((prevSlide) => (prevSlide + 1) % slides.length);
-  };
-
-  const handleScrollLeft = () => {
-    setCurrentSlide((prevSlide) => (prevSlide - 1 + slides.length) % slides.length);
-  };
-
-  const handleDotClick = (index: number) => {
-    setCurrentSlide(index);
+  const handleIntersect = () => {
+    setIsVisible(true);
   };
 
   return (
-    <div className={styles.container}>
-      <div className={styles.slider}>
-        {slides.map((slide, index) => (
-          <div className={`${styles.slide} ${currentSlide === index ? styles.active : ''}`} key={index}>
-            <h1 className={styles.heading}>{slide.header}</h1>
-            {Array.isArray(slide.text) ? (
-              <p className={styles.text}>
-                {slide.text.map((line, lineIndex) => (
-                  <span key={lineIndex}>
-                    {line}
-                    <br />
-                  </span>
-                ))}
-              </p>
-            ) : (
-              <p className={styles.text}>{slide.text}</p>
-            )}
-          </div>
-        ))}
-      </div>
-      <div className={styles.controls}>
-        <button className={styles.scrollButton} onClick={handleScrollLeft}>
-          &lt;
-        </button>
-        <div className={styles.dots}>
-          {slides.map((_, index) => (
-            <button
-              key={index}
-              className={`${styles.dot} ${currentSlide === index ? styles.active : ''}`}
-              onClick={() => handleDotClick(index)}
-            />
-          ))}
+    <IntersectionObserverWrapper onIntersect={handleIntersect} threshold={0.2}>
+      <div className={styles.container}>
+        <div className={`${styles.slider} ${isVisible ? styles.animate : ''}`}>
+          {slides.map((slide, index) => {
+            const isActive = index === activeIndex;
+            const isPrevious = index === activeIndex - 1;
+            const isNext = index === activeIndex + 1;
+
+            const slideClasses = [
+              styles.slide,
+              isActive ? styles.active : '',
+              isPrevious ? styles.previous : '',
+              isNext ? styles.next : '',
+            ].join(' ');
+
+            return (
+              <div className={slideClasses} key={index}>
+                <div className={styles.textBox}>
+                  <h1 className={styles.heading}>{slide.header}</h1>
+                  {Array.isArray(slide.text) ? (
+                    <p className={styles.text}>
+                      {slide.text.map((line, lineIndex) => (
+                        <span key={lineIndex}>
+                          {line}
+                          <br />
+                        </span>
+                      ))}
+                    </p>
+                  ) : (
+                    <p className={styles.text}>{slide.text}</p>
+                  )}
+                </div>
+              </div>
+            );
+          })}
         </div>
-        <button className={styles.scrollButton} onClick={handleScrollRight}>
-          &gt;
-        </button>
       </div>
-    </div>
+    </IntersectionObserverWrapper>
   );
 };
 
-export default Component;
+export default Feature3;

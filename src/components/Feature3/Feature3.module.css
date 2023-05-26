@@ -1,33 +1,61 @@
 .container {
   width: 100%;
-  min-height: 200px; /* Set a minimum height for the container */
+  min-height: 200px;
   overflow: hidden;
   position: relative;
-  background-color: #bba97a; /* Adjust the background color here */
-  border-radius: 10px; /* Adjust the border radius here */
+  border-radius: 10px;
 }
 
 .slider {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   transition: transform 0.5s ease;
+  height: 100%;
 }
 
 .slide {
-  width: 100%;
+  flex: 1;
   height: 100%;
-  display: none; /* Hide all slides by default */
-  color: black; /* Adjust the text color here */
-  font-family: Arial, sans-serif; /* Adjust the font family here */
+  min-width: 33%;
+  opacity: 0;
+  position: relative;
+  color: black;
+  font-family: Arial, sans-serif;
+
 }
 
 .slide.active {
-  display: flex; /* Show only the active slide */
+  opacity: 1;
+}
+
+.slide.previous {
+  opacity: 0;
+  transform: translateX(100%);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.slide.next {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+
+.textBox {
+  background-color: rgba(187, 169, 122, 0.9);
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #bba97a;
   text-align: center;
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s ease;
+}
+
+.animate .slide.active .textBox {
+  transform: translateY(0);
 }
 
 .heading {
@@ -38,44 +66,20 @@
 .text {
   font-size: 16px;
   margin-bottom: 50px;
-}
-
-.controls {
-  position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  bottom: 10px;
-}
-
-.scrollButton {
-  background-color: #f0f0f0;
-  border: none;
-  padding: 5px 10px;
-  font-size: 20px;
-  cursor: pointer;
-}
-
-.dots {
-  display: flex;
-}
-
-.dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background-color: #999;
-  margin: 0 5px;
-  cursor: pointer;
-}
-
-.dot.active {
-  background-color: #555;
+  white-space: break-spaces;
 }
 
 @media (max-width: 768px) {
+  .slider {
+    flex-direction: column;
+  }
+  
+  .slide {
+    width: 100%;
+    transition: opacity 0.5s ease, transform 0.5s cubic-bezier(0.25, 1, 0.25, 1); /* Adjust transition for mobile */
+  }
+
   .text {
-    font-size: 12px; /* Adjust the font size as needed */
+    font-size: 12px;
   }
 }

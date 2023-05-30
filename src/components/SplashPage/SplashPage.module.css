@@ -6,15 +6,11 @@
   
 }
 
-.logo {
-  max-width: 250px; /* Adjust the width as per your logo's dimensions */
-}
-
-
 .content {
   text-align: center;
   background-color: rgba(0, 0, 0, 0.6);
   max-width: 60%;
+  padding-top: 50px;
 }
 
 .content p {
@@ -24,6 +20,11 @@
   margin-right: auto;
   margin-top: 50px;
   margin-bottom: 50px;
+}
+
+.logoContainer {
+  margin-bottom: 20px; /* Add space between the logo and link text */
+
 }
 
 .link {

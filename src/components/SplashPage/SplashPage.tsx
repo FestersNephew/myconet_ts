@@ -13,6 +13,7 @@ const SplashPage: React.FC = () => {
 
   return (
     <div className={styles.container}>
+      
       <Background />
       <div className={styles.content}>
         <motion.div

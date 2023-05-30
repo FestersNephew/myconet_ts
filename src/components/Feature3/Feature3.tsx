@@ -45,7 +45,7 @@ const Feature3: React.FC = () => {
   };
 
   return (
-    <IntersectionObserverWrapper onIntersect={handleIntersect} threshold={0.2}>
+    <IntersectionObserverWrapper onIntersect={handleIntersect} threshold={1.0}>
       <div className={styles.container}>
         <div className={`${styles.slider} ${isVisible ? styles.animate : ''}`}>
           {slides.map((slide, index) => {

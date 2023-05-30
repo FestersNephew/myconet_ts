@@ -25,64 +25,46 @@ const slides = [
 ];
 
 const Feature3: React.FC = () => {
-  const [activeIndex, setActiveIndex] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    if (isVisible) {
-      const interval = setInterval(() => {
-        setActiveIndex((prevIndex) => (prevIndex === slides.length - 1 ? 0 : prevIndex + 1));
-      }, 5000);
+    const handleScroll = () => {
+      const feature3Section = document.getElementById('feature3-section');
+      const rect = feature3Section?.getBoundingClientRect();
 
-      return () => {
-        clearInterval(interval);
-      };
-    }
-  }, [isVisible]);
+      if (rect?.top && rect.top < window.innerHeight * 0.8) {
+        setIsVisible(true);
+      } else {
+        setIsVisible(false);
+      }
+    };
 
-  const handleIntersect = () => {
-    setIsVisible(true);
-  };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
-    <IntersectionObserverWrapper onIntersect={handleIntersect} threshold={1.0}>
-      <div className={styles.container}>
-        <div className={`${styles.slider} ${isVisible ? styles.animate : ''}`}>
-          {slides.map((slide, index) => {
-            const isActive = index === activeIndex;
-            const isPrevious = index === activeIndex - 1;
-            const isNext = index === activeIndex + 1;
-
-            const slideClasses = [
-              styles.slide,
-              isActive ? styles.active : '',
-              isPrevious ? styles.previous : '',
-              isNext ? styles.next : '',
-            ].join(' ');
-
-            return (
-              <div className={slideClasses} key={index}>
-                <div className={styles.textBox}>
-                  <h1 className={styles.heading}>{slide.header}</h1>
-                  {Array.isArray(slide.text) ? (
-                    <p className={styles.text}>
-                      {slide.text.map((line, lineIndex) => (
-                        <span key={lineIndex}>
-                          {line}
-                          <br />
-                        </span>
-                      ))}
-                    </p>
-                  ) : (
-                    <p className={styles.text}>{slide.text}</p>
-                  )}
-                </div>
-              </div>
-            );
-          })}
+    <div id="feature3-section" className={`${styles.container} ${isVisible ? styles.visible : ''}`}>
+      {slides.map((slide, index) => (
+        <div className={styles.slide} key={index}>
+          <div className={styles.textBox}>
+            <h1 className={styles.heading}>{slide.header}</h1>
+            {Array.isArray(slide.text) ? (
+              <p className={styles.text}>
+                {slide.text.map((line, lineIndex) => (
+                  <span key={lineIndex}>
+                    {line}
+                    <br />
+                  </span>
+                ))}
+              </p>
+            ) : (
+              <p className={styles.text}>{slide.text}</p>
+            )}
+          </div>
         </div>
-      </div>
-    </IntersectionObserverWrapper>
+      ))}
+    </div>
   );
 };
 

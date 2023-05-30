@@ -1,49 +1,19 @@
 .container {
-  width: 100%;
-  min-height: 200px;
-  overflow: hidden;
-  position: relative;
-  border-radius: 10px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
 }
 
-.slider {
-  display: flex;
-  flex-direction: row;
-  transition: transform 0.5s ease;
-  height: 100%;
+.visible {
+  opacity: 1;
 }
 
 .slide {
   flex: 1;
   height: 100%;
   min-width: 33%;
-  opacity: 0;
   position: relative;
   color: black;
   font-family: Arial, sans-serif;
-  border-radius: 10px;
-  transition: opacity 1s ease;
-}
-
-.slide.active {
-  opacity: 1;
-  animation: slideIn 0.5s forwards; /* Added animation for gradually increasing opacity */
-}
-
-
-.slide.next {
-  opacity: 0;
-  transform: translateX(-100%);
-  transition: opacity 0.5s ease, transform 0.5s ease;
-}
-
-@keyframes slideIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
 }
 
 .textBox {
@@ -56,12 +26,6 @@
   padding: 20px;
   width: 100%;
   height: 100%;
-  transition: transform 0.5s ease;
-  border-radius: 10px 10px 10px 10px; /* Add border-radius for rounded edges */
-}
-
-.animate .slide.active .textBox {
-  transform: translateY(0);
 }
 
 .heading {
@@ -73,16 +37,12 @@
   font-size: 16px;
   margin-bottom: 50px;
   white-space: break-spaces;
+  text-align: left;
 }
 
 @media (max-width: 768px) {
-  .slider {
-    flex-direction: column;
-  }
-  
   .slide {
     width: 100%;
-    transition: opacity 0.5s ease, transform 0.5s cubic-bezier(0.25, 1, 0.25, 1); /* Adjust transition for mobile */
   }
 
   .text {

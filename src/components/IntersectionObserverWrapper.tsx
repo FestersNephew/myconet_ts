@@ -13,7 +13,7 @@ const IntersectionObserverWrapper: React.FC<IntersectionObserverWrapperProps> = 
   threshold = 1.0,
   children,
 }) => {
-  const targetRef = useRef<HTMLDivElement>(null);
+  const targetRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(

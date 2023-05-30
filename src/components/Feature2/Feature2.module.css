@@ -10,7 +10,7 @@
   margin-top: 100px;
   position: relative;
   overflow: hidden;
-  height: 550px;
+  height: 660px;
   margin-left: auto; /* Align to the right */
   width: 50%; /* Set the initial width to full width */
 }
@@ -28,6 +28,7 @@
   overflow-y: auto; /* Enable scrolling when text exceeds the container height */
   max-width: calc(100% - 80px); /* Adjust the value (80px) as needed */
   margin-left: 15%; /* Push the left alignment to the right */
+  line-height: 1.5;
 }
 
 

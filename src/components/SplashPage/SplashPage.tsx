@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import Image from 'next/image';
 import Background from '../Background/Background';
 import styles from './SplashPage.module.css';
 import Link from 'next/link';
@@ -13,7 +12,6 @@ const SplashPage: React.FC = () => {
 
   return (
     <div className={styles.container}>
-      
       <Background />
       <div className={styles.content}>
         <motion.div
@@ -22,14 +20,7 @@ const SplashPage: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <Image
-            className={styles.logo}
-            src="/images/MycoLogo.png"
-            alt="MycoNet Logo"
-            width={250} // Adjust the width as per your logo's dimensions
-            height={75}
-            
-          />
+          <h1 className={styles.logo}>MycoNet</h1>
         </motion.div>
 
         <Link href="/about" passHref>

@@ -20,7 +20,7 @@ const slides = [
   {
     header: 'How will delegators benefit from delegating to MycoNet?',
     text:
-      'MycoNets dedication to scaling with the Bittensor Network ensures reliable and secure validators with near 100% uptime. We plan on maintaining validators on multiple subnets to maximize our delegators incentive return. We are developing a unique NFT platform that will be the first of its kind in the Bittensor Network. It will give pride of ownership, reward loyal delegators with a competitive APR rakeback program that utilizes a unique NFT mechanism to reward loyalty and the amount of TAO delegated. There may also be possibilities for referral rewards, staking incentives, and more (Details TBA).',
+    'MycoNet\'s dedication to scaling with the Bittensor Network ensures reliable and secure validators with near 100% uptime. We plan on maintaining validators on multiple subnets to maximize our delegators incentive return. We are developing a unique NFT platform that will be the first of its kind in the Bittensor Network. It will give pride of ownership, reward loyal delegators with a competitive APR rakeback program that utilizes a unique NFT mechanism to reward loyalty and the amount of TAO delegated. There may also be possibilities for referral rewards, staking incentives, and more (Details TBA).',
   },
 ];
 

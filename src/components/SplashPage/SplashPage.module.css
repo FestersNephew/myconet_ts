@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
   
 }
 
@@ -11,6 +11,11 @@
   background-color: rgba(0, 0, 0, 0.6);
   max-width: 60%;
   padding-top: 50px;
+
+  @media screen and (max-width: 480px) {
+    max-width:80%
+  }
+
 }
 
 .content p {
@@ -27,6 +32,19 @@
   font-size: 4rem;
   margin-bottom: 0.1rem;
   color: #bba97a;
+
+  /* Center the text on mobile */
+  @media screen and (max-width: 768px) {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* Adjust the font size on mobile */
+  @media screen and (max-width: 480px) {
+    font-size: 3rem;
+  }
+
 }
 
 .logoContainer {
@@ -39,6 +57,10 @@
   font-size: 2rem;
   text-decoration: none;
   
+  @media screen and (max-width: 480px) {
+    font-size: 2rem;
+  }
+
 }
 
 .link a {
@@ -55,8 +77,14 @@
   overflow: hidden;
   border-right: 0.15em solid #000; /* Adjust the border color and width */
   white-space: normal;
+  line-height: 1.5;
   letter-spacing: 0.15em; /* Adjust the letter spacing */
   animation: typing 3s steps(40, end), blink-caret 0.75s step-end infinite;
+
+  @media screen and (max-width: 480px) {
+    font-size: 0.9rem;
+  }
+
 }
 
 @keyframes typing {

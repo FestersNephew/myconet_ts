@@ -29,7 +29,7 @@ const Feature2: React.FC = () => {
   return (
     <section className={styles.feature2}>
       <h2 className={styles.feature2Title}>
-        MycoNets approach to adhere to this vision includes:
+        MycoNet&apos;s approach to adhere to this vision includes:
       </h2>
       <h4 className={styles.pointText}>{points[activeIndex]}</h4>
       <div className={styles.dotContainer}>

@@ -9,6 +9,7 @@ import HeroSection from '@/components/HeroSection/HeroSection';
 import Background from '@/components/Background/Background';
 import 'intersection-observer';
 
+
 const AboutPage: React.FC = () => {
   useEffect(() => {}, []);
 
@@ -31,7 +32,7 @@ const AboutPage: React.FC = () => {
         <TextBoxSection />
       </div>
       <HeroSection />
-
+        
       <div className="container">
         <main>
           <div className="feature3-container">

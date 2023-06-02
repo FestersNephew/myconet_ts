@@ -7,9 +7,10 @@ const StakeButton: React.FC = () => {
   const [isHovered, setIsHovered] = useState(false);
 
   const handleClick = () => {
-    // Handle button click event, e.g., navigate to another page
-    router.push('/another-page');
+    // Navigate to staking.myconet.ai
+    window.location.href = 'https://staking.myconet.ai';
   };
+  
 
   const handleMouseEnter = () => {
     setIsHovered(true);
@@ -19,17 +20,19 @@ const StakeButton: React.FC = () => {
     setIsHovered(false);
   };
 
-  const starPath = 'M12 2.6l1.96 6.03h6.35l-5.11 3.71 1.96 6.03-5.1-3.71-5.12 3.71 1.96-6.03-5.11-3.71h6.35z';
+  const starPath =
+  'M12 0 L14 4 L19 4 L15 7 L16 11 L12 9 L8 11 L9 7 L5 4 L10 4 Z';
+
 
   const starStyle = {
     fill: isHovered ? '#FFD700' : '#2b3a27',
-    width: isHovered ? '180px' : '160px',
-    height: isHovered ? '180px' : '160px',
+    width: isHovered ? '170px' : '170px',
+    height: isHovered ? '170px' : '170px',
   };
 
   const buttonText = {
-    fontSize: isHovered ? '2px' : '3px',
-    fill: isHovered ? '#000000' : '#bba97a',
+    fontSize: isHovered ? '1.75px' : '1.75px',
+    fill: isHovered ? '#2b3a27' : '#bba97a',
   };
 
   return (

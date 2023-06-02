@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import Background from '../Background/Background';
 import styles from './SplashPage.module.css';
 import Link from 'next/link';
+import StakeButton from '../StakeButton/StakeButton';
 
 const SplashPage: React.FC = () => {
   const linkVariants = {
@@ -13,6 +14,7 @@ const SplashPage: React.FC = () => {
   return (
     <div className={styles.container}>
       <Background />
+      <StakeButton/>
       <div className={styles.content}>
         <motion.div
           className={styles.logoContainer}

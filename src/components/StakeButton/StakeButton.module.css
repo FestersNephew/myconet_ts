@@ -19,9 +19,11 @@
 .buttonText {
   font-size: 14px;
   fill: #bba97a;
+  font-weight: bold;
+  text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
   transition: fill 0.3s ease;
   position: absolute;
   top: 100%;
   left: 100%;
-  transform: translate(-50%, -78%);
+  transform: translate(-50%, -80%);
 }

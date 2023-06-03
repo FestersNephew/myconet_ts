@@ -8,7 +8,7 @@ const StakeButton: React.FC = () => {
 
   const handleClick = () => {
     // Navigate to staking.myconet.ai
-    window.location.href = 'https://kmadk.github.io/MycoNet/';
+    window.location.href = 'https://staking.myconet.ai/';
   };
   
 

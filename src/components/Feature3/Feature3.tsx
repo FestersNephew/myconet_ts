@@ -4,7 +4,7 @@ import IntersectionObserverWrapper from '../IntersectionObserverWrapper';
 
 const slides = [
   {
-    header: <a href="https://kmadk.github.io/MycoNet/">Delegate with us!</a>,
+    header: <a href="https://staking.myconet.ai">Delegate with us!</a>,
     text: [
       'Here is how:',
       'Subnetwork 3: Finney Validator: UID 423',

@@ -31,8 +31,12 @@ const StakeButton: React.FC = () => {
   };
 
   const buttonText = {
-    fontSize: isHovered ? '1.75px' : '1.75px',
-    fill: isHovered ? '#2b3a27' : '#2b3a27',
+    fontSize: '0.15rem',
+    fill: '#2b3a27',
+    position: 'absolute',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -75%)',
   };
 
   return (

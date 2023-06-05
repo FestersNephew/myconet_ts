@@ -8,7 +8,7 @@ const StakeButton: React.FC = () => {
 
   const handleClick = () => {
     // Handle button click event, e.g., navigate to another page
-    router.push('/another-page');
+    router.push('/Staking/staking');
   };
 
   const handleMouseEnter = () => {

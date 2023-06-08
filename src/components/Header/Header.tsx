@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './Header.module.css';
-import StakeButton from '../StakeButton/StakeButton';
+
 
 const Header: React.FC = () => {
   const handleHomeClick = () => {
@@ -23,7 +23,7 @@ const Header: React.FC = () => {
 
   return (
     <header className={styles.header}>
-      <StakeButton/>
+      
       <h1>MycoNet</h1>
       <nav>
         <ul>

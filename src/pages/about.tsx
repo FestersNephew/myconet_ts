@@ -8,6 +8,7 @@ import Footer from '../components/Footer/Footer';
 import HeroSection from '@/components/HeroSection/HeroSection';
 import Background from '@/components/Background/Background';
 import 'intersection-observer';
+import StakeButton from '@/components/StakeButton/StakeButton';
 
 const AboutPage: React.FC = () => {
   useEffect(() => {}, []);
@@ -29,6 +30,7 @@ const AboutPage: React.FC = () => {
       <Background />
       <div>
         <TextBoxSection />
+        <StakeButton/>
       </div>
       <HeroSection />
 

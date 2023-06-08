@@ -1,8 +1,7 @@
 .stakeButtonContainer {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   margin-top: 0.5rem;
-  margin-right: 0.5rem;
 }
 
 .stakeButton {
@@ -11,8 +10,8 @@
   outline: none;
   padding: 0;
   cursor: pointer;
-  width: 180px;
-  height: 180px;
+  width: 220px;
+  height: 100px;
 }
 
 .stakeButton:hover {

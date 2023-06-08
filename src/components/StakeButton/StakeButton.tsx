@@ -43,7 +43,7 @@ const StakeButton: React.FC = () => {
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style={starStyle as React.CSSProperties}>
           <path d={starPath} />
           <text className={styles.buttonText} style={buttonText as React.CSSProperties}>
-            <tspan x="50%" y="50%" textAnchor="middle" dominantBaseline="middle">
+            <tspan x="50%" y="25%" textAnchor="middle" dominantBaseline="middle">
               Stake with Us
             </tspan>
           </text>

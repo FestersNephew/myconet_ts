@@ -7,19 +7,10 @@
   position: absolute;
   top: 0.5rem;
   right: 1rem;
+  width: 180px;
+  height: 180px;
 }
 
-
-.star {
-  transition: fill 0.3s ease;
-  width: 160px;
-  height: 160px;
-}
-
-.buttonText {
-  font-size: 2px;
-  fill: #bba97a;
-  font-weight: bold;
-  text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
-  transition: fill 0.3s ease;
+.stakeButton:hover {
+  fill: #2b3a27;
 }

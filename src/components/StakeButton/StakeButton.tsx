@@ -26,13 +26,13 @@ const StakeButton: React.FC = () => {
 
   const starStyle = {
     fill: isHovered ? '#2b3a27' : '#FFD700',
-    width: isHovered ? '180px' : '180px',
-    height: isHovered ? '180px' : '180px',
   };
 
   const buttonText = {
     fontSize: '0.15rem',
     fill: '#2b3a27',
+    fontWeight: 'bold',
+    textShadow: '-1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff',
     position: 'absolute',
     top: '50%',
     left: '50%',

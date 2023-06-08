@@ -23,8 +23,8 @@ const Header: React.FC = () => {
 
   return (
     <header className={styles.header}>
-      <h1>MycoNet</h1>
       <StakeButton/>
+      <h1>MycoNet</h1>
       <nav>
         <ul>
           <li>

@@ -9,8 +9,8 @@
 .content {
   text-align: center;
   background-color: rgba(0, 0, 0, 0.6);
-  max-width: 60%;
-  padding-top: 50px;
+  max-width: 80%;
+  padding-top: 5px;
 
   @media screen and (max-width: 480px) {
     max-width:90%

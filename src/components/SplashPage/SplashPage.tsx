@@ -14,8 +14,8 @@ const SplashPage: React.FC = () => {
   return (
     <div className={styles.container}>
       <Background />
-      <StakeButton/>
       <div className={styles.content}>
+      <StakeButton/>
         <motion.div
           className={styles.logoContainer}
           initial={{ opacity: 0, y: -20 }}
@@ -24,7 +24,6 @@ const SplashPage: React.FC = () => {
         >
           <h1 className={styles.logo}>MycoNet</h1>
         </motion.div>
-
         <Link href="/about" passHref>
           <motion.span
             className={`${styles.link}`}
@@ -39,6 +38,7 @@ const SplashPage: React.FC = () => {
         <p className={styles.typing}>
           Our decentralized AI network aims to harness the power of artificial intelligence for the greater good. With a diverse team dedicated to responsible and ethical AI development, we strive to create a future where AI benefits humanity as a whole and serves as a counterbalance to centralized efforts by major tech companies. Join us in shaping an AI-driven world that prioritizes humanity&apos;s well-being.
         </p>
+        
       </div>
     </div>
   );

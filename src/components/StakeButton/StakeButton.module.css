@@ -1,16 +1,25 @@
+.stakeButtonContainer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 0.5rem;
+  margin-right: 0.5rem;
+}
+
 .stakeButton {
   background-color: transparent;
   border: none;
   outline: none;
   padding: 0;
   cursor: pointer;
-  position: absolute;
-  top: 0.5rem;
-  right: 1rem;
   width: 180px;
   height: 180px;
 }
 
 .stakeButton:hover {
   fill: #2b3a27;
+}
+
+.buttonText {
+  font-weight: bold;
+  text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
 }

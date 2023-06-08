@@ -27,9 +27,9 @@ const StakeButton: React.FC = () => {
 
   const buttonText = {
     fontSize: '0.15rem',
-    fill: '#2b3a27',
+    fill: '#FFFFFF',
     fontWeight: 'bold',
-    textShadow: '-1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff',
+    textShadow: '-1px -1px 0 #D2B48C, 1px -1px 0 #D2B48C, -1px 1px 0 #D2B48C, 1px 1px 0 #D2B48C',
   };
 
   return (
